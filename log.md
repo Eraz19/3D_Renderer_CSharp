@@ -44,3 +44,34 @@ To remove this error lets go to the ```.csproj``` file and let's add a line to a
 
 </Project>
 ```
+## Init GIT project
+
+To save the progress of the project lets initialize a git repository.
+
+project structure:
+```shell
+.
+├── 3DRenderer.csproj
+├── bin
+├── lib
+│   └── SDL2-CS # SDL2 C# binding
+├── obj
+├── Program.cs # program entry point
+└── src # create this folder to put all our code
+```
+
+.gitignore
+```shell
+# The content of these folder will be ignored when added to the git repo
+lib/
+bin/
+obj/
+```
+
+Lets initialize our git repo. First go to your git 
+
+```shell
+➜  ~ git init # initialize the git repo
+➜  ~ git add --all # adds all the folder to the list of commits
+➜  ~ git commit -m "First commit to initialize project repo"
+```

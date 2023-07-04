@@ -1,17 +1,19 @@
 ﻿using SDL2;
 
-while (true)
+
+if (SDL.SDL_Init(SDL.SDL_INIT_VIDEO) < 0)
 {
-	SDL.SDL_Init(SDL.SDL_INIT_VIDEO);
+	Console.WriteLine("Error when initializing SDL.");
+	Console.WriteLine("Error: {0}", SDL.SDL_GetError());
+}
+else
+{
+	SDL_Window.WindowInstance window = new SDL_Window.WindowInstance();
 
-	SDL.SDL_CreateWindow(
-		"test",
-		SDL.SDL_WINDOWPOS_CENTERED,
-		SDL.SDL_WINDOWPOS_CENTERED,
-		600,
-		400,
-		SDL.SDL_WindowFlags.SDL_WINDOW_RESIZABLE
+	window.Run(
+		(IntPtr window_ptr, SDL_Window.WindowEvents e) =>
+		{
+			float screen_aspect_ratio = window.WindowAspectRatio();
+		}
 	);
-
-	
 }

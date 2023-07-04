@@ -1,15 +1,15 @@
 namespace Vector
 {
-	public abstract class Vector_2D
+	public struct Vector_2D
 	{
-		public float x { get; set; }
-		public float y { get; set; }
+		public float x;
+		public float y;
 	}
 
-	public abstract class Vector_3D
+	public struct Vector_3D
 	{
-		public float x { get; set; }
-		public float y { get; set; }
-		public float z { get; set; }
+		public float x;
+		public float y;
+		public float z;
 	}
 }
